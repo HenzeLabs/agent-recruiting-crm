@@ -1,0 +1,34 @@
+Hey Gina! 👋
+
+Your new recruiting CRM is almost ready! Before I send you the link, can you do one quick setup step?
+
+📧 CREATE GMAIL APP PASSWORD (takes 5 min):
+
+1. Go to: https://myaccount.google.com/apppasswords
+
+2. Sign in with gina.ortiz.sfg@gmail.com
+
+3. You might need to enable 2-Step Verification first (Google will walk you through it)
+
+4. Then:
+   - Click "Select app" → choose "Mail"
+   - Click "Select device" → choose "Other"
+   - Type: "AutoMentor CRM"
+   - Click "Generate"
+
+5. SAVE THE 16-DIGIT PASSWORD (looks like: xxxx xxxx xxxx xxxx)
+   - Screenshot it or write it down
+   - You won't be able to see it again!
+
+This lets your CRM send follow-up emails automatically from your Gmail.
+
+Once you have the password, text me back and I'll send you the dashboard link! 🚀
+
+The dashboard will let you:
+✅ Track all recruits in one place
+✅ See pipeline stages
+✅ Send follow-ups with one click
+✅ View weekly stats
+✅ Track conversations
+
+Let me know when you're ready! 📱

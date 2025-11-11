@@ -1,57 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="dashboard-layout">
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <h1 class="logo">AutoMentor</h1>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="/" class="nav-item active">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-        </svg>
-        Dashboard
-      </a>
-      <a href="/add" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-        </svg>
-        Recruits
-      </a>
-    </nav>
-  </aside>
+<div class="dashboard-container">
+  <!-- Logo -->
+  <div class="logo-section">
+    <img src="/logo.png" alt="AutoMentor Logo" class="dashboard-logo">
+  </div>
 
-  <!-- Main Content -->
-  <main class="content-wrapper">
-    <!-- Top Bar -->
-    <header class="topbar">
-      <div class="topbar-title">
-        <h2>Dashboard</h2>
-        <p class="subtitle">Welcome back, Gina</p>
-      </div>
-      <div class="topbar-actions">
-        <a href="/add" class="btn-primary-action">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Add Recruit
-        </a>
-      </div>
-    </header>
+  <!-- Welcome Header -->
+  <div class="welcome-section">
+    <h1>Welcome back, Gina</h1>
+    <p>Here's what's happening with your recruiting pipeline</p>
+    <a href="/add" class="btn-add-recruit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      Add New Recruit
+    </a>
+  </div>
 
-    <!-- Main Content Area -->
-    <div class="dashboard-grid">
-  <!-- Pipeline Overview - Collapsible (starts collapsed) -->
-  <div class="collapsible-section dashboard-section">
-    <button class="section-toggle" onclick="toggleSection('pipeline')">
-      <span class="toggle-icon">▶</span>
+  <!-- Dashboard Content -->
+  <div class="dashboard-content">
+  <!-- Pipeline Overview - Always Visible -->
+  <div class="section-card dashboard-section">
+    <div class="section-header">
       <h2>Pipeline Overview</h2>
-    </button>
-    <div class="section-content collapsed" id="pipeline-content">
+    </div>
+    <div class="section-content">
       <section class="stats-row">
         {% for stage, count in counts.items() %}
         <div class="stat-card">
@@ -137,21 +111,20 @@
       </section>
 
       <section class="weekly-summary">
-        <h3>This Week</h3>
+        <h3>This Week At A Glance</h3>
         <div class="summary-stats">
-          <span class="summary-item">
-            <strong>{{ weekly_new }}</strong> new leads
-          </span>
-          <span class="summary-item">
-            <strong>{{ weekly_licensed }}</strong> licensed
-          </span>
-          <span class="summary-item">
-            <strong
-              >{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else
-              0)|round(1) }}%</strong
-            >
-            conversion
-          </span>
+          <div class="summary-item">
+            <strong>{{ weekly_new }}</strong>
+            <span>new leads</span>
+          </div>
+          <div class="summary-item">
+            <strong>{{ weekly_licensed }}</strong>
+            <span>licensed</span>
+          </div>
+          <div class="summary-item">
+            <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong>
+            <span>conversion</span>
+          </div>
         </div>
       </section>
     </div>
@@ -166,7 +139,7 @@
       <span class="toggle-icon">▼</span>
       <h2>Priority Actions ({{ priority_count }})</h2>
     </button>
-    <div class="section-content" id="priority-content">
+    <div class="section-content collapsed" id="priority-content">
       <div class="recruits-list">
         {% for r in recruits %} {% if r.get('is_overdue') or r['stage'] == 'New'
         %} {% include 'recruit_card.html' %} {% endif %} {% endfor %}
@@ -243,22 +216,17 @@
     }
   });
 
-  // Simple collapsible sections
+  // Toggle sections
   function toggleSection(sectionId) {
     const content = document.getElementById(sectionId + "-content");
-    const header = content.previousElementSibling;
-    const icon = header.querySelector(".toggle-icon");
+    const button = content.previousElementSibling.querySelector('.toggle-btn');
 
-    if (content.classList.contains("collapsed")) {
-      // Expand
-      content.classList.remove("collapsed");
-      header.classList.add("active");
-      icon.textContent = "▼";
+    if (content.classList.contains('collapsed')) {
+      content.classList.remove('collapsed');
+      button.textContent = '▲';
     } else {
-      // Collapse
-      content.classList.add("collapsed");
-      header.classList.remove("active");
-      icon.textContent = "▶";
+      content.classList.add('collapsed');
+      button.textContent = '▼';
     }
   }
 

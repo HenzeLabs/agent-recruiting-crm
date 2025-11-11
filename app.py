@@ -573,6 +573,12 @@ def service_worker():
     response.headers['Cache-Control'] = 'no-cache'
     return response
 
+# Add route for logo
+@app.route('/logo.png')
+def logo():
+    from flask import send_from_directory
+    return send_from_directory('.', 'logo.png')
+
 # Add caching headers for static assets
 @app.after_request
 def add_header(response):

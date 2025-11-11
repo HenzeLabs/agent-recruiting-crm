@@ -79,11 +79,11 @@ class CRM {
     const recruitCard = form.closest(".recruit-card");
     const recruitId = new URL(form.action).pathname.split("/").pop();
 
+    const infoParagraphs = recruitCard.querySelectorAll(".recruit-info p");
     const data = {
       name: recruitCard.querySelector(".recruit-info h3").textContent,
-      email: recruitCard.querySelector(".recruit-info p:first-of-type")
-        .textContent,
-      phone: recruitCard.querySelector(".recruit-info p.phone").textContent,
+      email: infoParagraphs[0] ? infoParagraphs[0].textContent : '',
+      phone: infoParagraphs[1] ? infoParagraphs[1].textContent : '',
       stage: formData.get("stage"),
       notes: formData.get("notes"),
     };
