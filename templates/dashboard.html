@@ -1,51 +1,132 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="dashboard-grid">
-  <!-- Stats Cards (Collapsible) -->
-  <div class="collapsible-section">
-    <button class="section-header" onclick="toggleSection('stats')">
-      <span class="toggle-icon">▼</span>
-      <h3>📊 Pipeline Overview</h3>
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h1 class="logo">AutoMentor</h1>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        Dashboard
+      </a>
+      <a href="/add" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+        Recruits
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content-wrapper">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-title">
+        <h2>Dashboard</h2>
+        <p class="subtitle">Welcome back, Gina</p>
+      </div>
+      <div class="topbar-actions">
+        <a href="/add" class="btn-primary-action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Add Recruit
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-grid">
+  <!-- Pipeline Overview - Collapsible (starts collapsed) -->
+  <div class="collapsible-section dashboard-section">
+    <button class="section-toggle" onclick="toggleSection('pipeline')">
+      <span class="toggle-icon">▶</span>
+      <h2>Pipeline Overview</h2>
     </button>
-    <div class="section-content" id="stats-content">
+    <div class="section-content collapsed" id="pipeline-content">
       <section class="stats-row">
         {% for stage, count in counts.items() %}
-          <div class="stat-card">
-            <div class="stat-icon">
-              {% if stage == "New" %}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 5v14M5 12h14"/>
-                </svg>
-              {% elif stage == "Contacted" %}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              {% elif stage == "In Training" %}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-                </svg>
-              {% elif stage == "Licensed" %}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3"/>
-                </svg>
-              {% else %}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
-                </svg>
-              {% endif %}
-            </div>
-            <div class="stat-content">
-              <h3>{{ count }}</h3>
-              <p>{{ stage }}</p>
-            </div>
-          </div>
-        {% endfor %}
-        
-        <div class="stat-card overdue-card {% if overdue_count > 0 %}has-overdue{% endif %}">
+        <div class="stat-card">
           <div class="stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12,6 12,12 16,14"/>
+            {% if stage == "New" %}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+            {% elif stage == "Contacted" %}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            {% elif stage == "In Training" %}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+              />
+            </svg>
+            {% elif stage == "Licensed" %}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3" />
+            </svg>
+            {% else %}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4M12 16h.01" />
+            </svg>
+            {% endif %}
+          </div>
+          <div class="stat-content">
+            <h3>{{ count }}</h3>
+            <p>{{ stage }}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        <div
+          class="stat-card overdue-card {% if overdue_count > 0 %}has-overdue{% endif %}"
+        >
+          <div class="stat-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12,6 12,12 16,14" />
             </svg>
           </div>
           <div class="stat-content">
@@ -54,7 +135,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="weekly-summary">
         <h3>This Week</h3>
         <div class="summary-stats">
@@ -65,294 +146,237 @@
             <strong>{{ weekly_licensed }}</strong> licensed
           </span>
           <span class="summary-item">
-            <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion
+            <strong
+              >{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else
+              0)|round(1) }}%</strong
+            >
+            conversion
           </span>
         </div>
       </section>
     </div>
   </div>
 
-  <!-- Priority Actions (Collapsible) -->
-  {% if overdue_count > 0 or recruits|selectattr('stage', 'equalto', 'New')|list|length > 0 %}
-  <div class="collapsible-section priority">
-    <button class="section-header" onclick="toggleSection('priority')">
+  <!-- Priority Actions - Collapsible (starts open, only shows if needed) -->
+  {% set priority_count = (overdue_count + recruits|selectattr('stage',
+  'equalto', 'New')|list|length) %} {% if priority_count > 0 %}
+    <!-- Priority Recruits - Collapsible (starts open) -->
+  <div class="collapsible-section priority-section dashboard-section">
+    <button class="section-toggle active" onclick="toggleSection('priority')">
       <span class="toggle-icon">▼</span>
-      <h3>🔥 Priority Actions ({{ (overdue_count + recruits|selectattr('stage', 'equalto', 'New')|list|length) }})</h3>
+      <h2>Priority Actions ({{ priority_count }})</h2>
     </button>
     <div class="section-content" id="priority-content">
       <div class="recruits-list">
-        {% for r in recruits %}
-          {% if r.get('is_overdue') or r['stage'] == 'New' %}
-            {% include 'recruit_card.html' %}
-          {% endif %}
-        {% endfor %}
+        {% for r in recruits %} {% if r.get('is_overdue') or r['stage'] == 'New'
+        %} {% include 'recruit_card.html' %} {% endif %} {% endfor %}
       </div>
     </div>
   </div>
   {% endif %}
 
-  <!-- All Recruits (Collapsible) -->
-  <div class="collapsible-section">
-    <button class="section-header" onclick="toggleSection('recruits')">
+  <!-- All Recruits - Collapsible (starts collapsed) -->
+  <div class="collapsible-section dashboard-section">
+    <button class="section-toggle" onclick="toggleSection('recruits')">
       <span class="toggle-icon">▶</span>
-      <h3>👥 All Recruits ({{ recruits|length }})</h3>
+      <h2>All Recruits ({{ recruits|length }})</h2>
     </button>
     <div class="section-content collapsed" id="recruits-content">
-      <div class="section-header">
-        <span class="recruit-count">{{ recruits|length }} total</span>
-      </div>
-      
       <div class="recruits-list">
-        {% for r in recruits %}
-          {% include 'recruit_card.html' %}
-        {% endfor %}
+        {% for r in recruits %} {% include 'recruit_card.html' %} {% endfor %}
       </div>
     </div>
   </div>
 </div>
-    
-    <!-- Priority Actions -->
-    {% if overdue_count > 0 or recruits|selectattr('stage', 'equalto', 'New')|list|length > 0 %}
-    <div class="section-container priority-section">
-      <button class="section-toggle active" onclick="toggleSection('priority')">
-        <span class="toggle-icon">▼</span>
-        <h3>🔥 Priority Actions ({{ (overdue_count + recruits|selectattr('stage', 'equalto', 'New')|list|length) }})</h3>
-      </button>
-      <div class="section-content" id="priority-content">
-        {% for r in recruits %}
-          {% if r.get('is_overdue') or r['stage'] == 'New' %}
-            {% include 'recruit_card.html' %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
 
-    <!-- Pipeline Overview -->
-    <div class="section-container">
-      <button class="section-toggle" onclick="toggleSection('pipeline')">
-        <span class="toggle-icon">▶</span>
-        <h3>📊 Pipeline Overview</h3>
-      </button>
-      <div class="section-content collapsed" id="pipeline-content">
-        <div class="stats-row">
-          {% for stage, count in counts.items() %}
-            <div class="stat-card" onclick="filterByStage('{{ stage }}')">
-              <div class="stat-content">
-                <h3>{{ count }}</h3>
-                <p>{{ stage }}</p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="weekly-details">
-          <p><strong>{{ weekly_new }}</strong> new • <strong>{{ weekly_licensed }}</strong> licensed • <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion</p>
-        </div>
-      </div>
     </div>
-
-    <!-- Active Recruits -->
-    <div class="section-container">
-      <button class="section-toggle" onclick="toggleSection('active')">
-        <span class="toggle-icon">▶</span>
-        <h3>👥 Active Recruits ({{ recruits|selectattr('stage', 'in', ['Contacted', 'In Training'])|list|length }})</h3>
-      </button>
-      <div class="section-content collapsed" id="active-content">
-        {% for r in recruits %}
-          {% if r['stage'] in ['Contacted', 'In Training'] %}
-            {% include 'recruit_card.html' %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-
-    <!-- All Recruits -->
-    <div class="section-container">
-      <button class="section-toggle" onclick="toggleSection('all')">
-        <span class="toggle-icon">▶</span>
-        <h3>📋 All Recruits ({{ recruits|length }})</h3>
-      </button>
-      <div class="section-content collapsed" id="all-content">
-        <div class="filter-tabs">
-          <button class="filter-tab active" onclick="filterRecruits('all')">All</button>
-          {% for stage in stages %}
-            <button class="filter-tab" onclick="filterRecruits('{{ stage }}')">{{ stage }}</button>
-          {% endfor %}
-        </div>
-        <div class="recruits-list" id="all-recruits">
-          {% for r in recruits %}
-            {% include 'recruit_card.html' %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-  </div>
+  </main>
 </div>
 
 <!-- Quick Follow-up Modal -->
-<div id="followupModal" class="modal" style="display: none;">
+<div id="followupModal" class="modal" style="display: none">
   <div class="modal-content">
     <div class="modal-header">
       <h3>Quick Follow-up</h3>
-      <button class="modal-close" onclick="closeFollowupModal()">&times;</button>
+      <button class="modal-close" onclick="closeFollowupModal()">
+        &times;
+      </button>
     </div>
     <div class="modal-body">
       <p>Send follow-up to <strong id="followupName"></strong></p>
-      
+
       <div class="template-buttons" id="templateButtons">
         <!-- Templates will be loaded here -->
       </div>
-      
+
       <div class="custom-message">
         <label for="customMessage">Or write custom message:</label>
-        <textarea id="customMessage" rows="3" placeholder="Type your message..."></textarea>
+        <textarea
+          id="customMessage"
+          rows="3"
+          placeholder="Type your message..."
+        ></textarea>
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn-primary" onclick="sendFollowup()">Send & Mark Contact</button>
-      <button class="btn-secondary" onclick="closeFollowupModal()">Cancel</button>
+      <button class="btn-primary" onclick="sendFollowup()">
+        Send & Mark Contact
+      </button>
+      <button class="btn-secondary" onclick="closeFollowupModal()">
+        Cancel
+      </button>
     </div>
   </div>
 </div>
 
 <script>
-let currentRecruitId = null;
-let messageTemplates = [];
+  let currentRecruitId = null;
+  let messageTemplates = [];
 
-// Load templates on page load
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const response = await fetch('/api/templates');
-    messageTemplates = await response.json();
-  } catch (error) {
-    console.error('Failed to load templates:', error);
-  }
-});
-
-// Simple collapsible sections
-function toggleSection(sectionId) {
-  const content = document.getElementById(sectionId + '-content');
-  const header = content.previousElementSibling;
-  const icon = header.querySelector('.toggle-icon');
-  
-  if (content.classList.contains('collapsed')) {
-    content.classList.remove('collapsed');
-    icon.textContent = '▼';
-  } else {
-    content.classList.add('collapsed');
-    icon.textContent = '▶';
-  }
-}
-
-// Filter recruits by stage
-function filterRecruits(stage) {
-  const cards = document.querySelectorAll('#all-recruits .recruit-card');
-  const pills = document.querySelectorAll('.filter-pill');
-  
-  // Update active pill
-  pills.forEach(pill => pill.classList.remove('active'));
-  if (event && event.target) event.target.classList.add('active');
-  
-  // Show/hide cards
-  cards.forEach(card => {
-    if (stage === 'all' || card.dataset.stage === stage) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
+  // Load templates on page load
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const response = await fetch("/api/templates");
+      messageTemplates = await response.json();
+    } catch (error) {
+      console.error("Failed to load templates:", error);
     }
   });
-}
 
-// Filter by stage from pipeline
-function filterByStage(stage) {
-  // Open all recruits section
-  const allSection = document.getElementById('all-content');
-  if (allSection.classList.contains('collapsed')) {
-    toggleSection('all');
+  // Simple collapsible sections
+  function toggleSection(sectionId) {
+    const content = document.getElementById(sectionId + "-content");
+    const header = content.previousElementSibling;
+    const icon = header.querySelector(".toggle-icon");
+
+    if (content.classList.contains("collapsed")) {
+      // Expand
+      content.classList.remove("collapsed");
+      header.classList.add("active");
+      icon.textContent = "▼";
+    } else {
+      // Collapse
+      content.classList.add("collapsed");
+      header.classList.remove("active");
+      icon.textContent = "▶";
+    }
   }
-  
-  // Filter to specific stage
-  setTimeout(() => {
-    const stageTab = document.querySelector(`[onclick="filterRecruits('${stage}')"]`);
-    if (stageTab) stageTab.click();
-  }, 100);
-}
 
-function quickFollowup(recruitId, name, stage) {
-  currentRecruitId = recruitId;
-  document.getElementById('followupName').textContent = name;
-  
-  // Show relevant templates
-  const templateButtons = document.getElementById('templateButtons');
-  templateButtons.innerHTML = '';
-  
-  const relevantTemplates = messageTemplates.filter(t => 
-    t.stage === stage || t.stage === null
-  );
-  
-  relevantTemplates.forEach(template => {
-    const btn = document.createElement('button');
-    btn.className = 'template-btn';
-    btn.textContent = template.name;
-    btn.onclick = () => selectTemplate(template.id, template.content.replace('{name}', name));
-    templateButtons.appendChild(btn);
-  });
-  
-  document.getElementById('followupModal').style.display = 'flex';
-}
+  // Filter recruits by stage
+  function filterRecruits(stage) {
+    const cards = document.querySelectorAll("#all-recruits .recruit-card");
+    const pills = document.querySelectorAll(".filter-pill");
 
-function selectTemplate(templateId, content) {
-  document.getElementById('customMessage').value = content;
-  // Highlight selected template
-  document.querySelectorAll('.template-btn').forEach(btn => btn.classList.remove('selected'));
-  event.target.classList.add('selected');
-}
+    // Update active pill
+    pills.forEach((pill) => pill.classList.remove("active"));
+    if (event && event.target) event.target.classList.add("active");
 
-async function sendFollowup() {
-  const message = document.getElementById('customMessage').value.trim();
-  if (!message) {
-    alert('Please enter a message');
-    return;
-  }
-  
-  try {
-    const response = await fetch('/api/quick-message', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        recruit_id: currentRecruitId,
-        message: message
-      })
-    });
-    
-    if (response.ok) {
-      window.crm.showNotification('Follow-up sent!', 'success');
-      closeFollowupModal();
-      
-      // Remove overdue badge
-      const card = document.querySelector(`[data-recruit-id="${currentRecruitId}"]`);
-      if (card) {
-        card.classList.remove('overdue');
-        const badge = card.querySelector('.overdue-badge');
-        if (badge) badge.remove();
+    // Show/hide cards
+    cards.forEach((card) => {
+      if (stage === "all" || card.dataset.stage === stage) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
       }
-      
-      // Update stats
-      window.crm.refreshStats();
-    } else {
-      throw new Error('Failed to send');
-    }
-  } catch (error) {
-    window.crm.showNotification('Failed to send follow-up', 'error');
+    });
   }
-}
 
-function closeFollowupModal() {
-  document.getElementById('followupModal').style.display = 'none';
-  document.getElementById('customMessage').value = '';
-  currentRecruitId = null;
-}
+  // Filter by stage from pipeline
+  function filterByStage(stage) {
+    // Open all recruits section
+    const allSection = document.getElementById("all-content");
+    if (allSection.classList.contains("collapsed")) {
+      toggleSection("all");
+    }
+
+    // Filter to specific stage
+    setTimeout(() => {
+      const stageTab = document.querySelector(
+        `[onclick="filterRecruits('${stage}')"]`
+      );
+      if (stageTab) stageTab.click();
+    }, 100);
+  }
+
+  function quickFollowup(recruitId, name, stage) {
+    currentRecruitId = recruitId;
+    document.getElementById("followupName").textContent = name;
+
+    // Show relevant templates
+    const templateButtons = document.getElementById("templateButtons");
+    templateButtons.innerHTML = "";
+
+    const relevantTemplates = messageTemplates.filter(
+      (t) => t.stage === stage || t.stage === null
+    );
+
+    relevantTemplates.forEach((template) => {
+      const btn = document.createElement("button");
+      btn.className = "template-btn";
+      btn.textContent = template.name;
+      btn.onclick = () =>
+        selectTemplate(template.id, template.content.replace("{name}", name));
+      templateButtons.appendChild(btn);
+    });
+
+    document.getElementById("followupModal").style.display = "flex";
+  }
+
+  function selectTemplate(templateId, content) {
+    document.getElementById("customMessage").value = content;
+    // Highlight selected template
+    document
+      .querySelectorAll(".template-btn")
+      .forEach((btn) => btn.classList.remove("selected"));
+    event.target.classList.add("selected");
+  }
+
+  async function sendFollowup() {
+    const message = document.getElementById("customMessage").value.trim();
+    if (!message) {
+      alert("Please enter a message");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/quick-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          recruit_id: currentRecruitId,
+          message: message,
+        }),
+      });
+
+      if (response.ok) {
+        window.crm.showNotification("Follow-up sent!", "success");
+        closeFollowupModal();
+
+        // Remove overdue badge
+        const card = document.querySelector(
+          `[data-recruit-id="${currentRecruitId}"]`
+        );
+        if (card) {
+          card.classList.remove("overdue");
+          const badge = card.querySelector(".overdue-badge");
+          if (badge) badge.remove();
+        }
+
+        // Update stats
+        window.crm.refreshStats();
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (error) {
+      window.crm.showNotification("Failed to send follow-up", "error");
+    }
+  }
+
+  function closeFollowupModal() {
+    document.getElementById("followupModal").style.display = "none";
+    document.getElementById("customMessage").value = "";
+    currentRecruitId = null;
+  }
 </script>
 
 {% endblock %}

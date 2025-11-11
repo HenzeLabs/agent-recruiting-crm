@@ -1,5 +1,154 @@
 /* Gina's Workflow Styles */
 
+/* Collapsible Sections - High Contrast */
+.collapsible-section {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 2px solid rgba(167, 139, 250, 0.4);
+  border-radius: 20px;
+  padding: 0;
+  margin-bottom: 1.5em;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(167, 139, 250, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.collapsible-section:hover {
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 12px 40px 0 rgba(167, 139, 250, 0.3),
+    0 0 0 1px rgba(167, 139, 250, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+.section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1.8em 2em;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.15) 0%,
+    rgba(236, 72, 153, 0.15) 100%
+  );
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid rgba(167, 139, 250, 0.2);
+}
+
+.section-toggle:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.25) 0%,
+    rgba(236, 72, 153, 0.25) 100%
+  );
+  transform: none;
+  box-shadow: none;
+}
+
+.section-toggle.active {
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.2) 0%,
+    rgba(236, 72, 153, 0.2) 100%
+  );
+  border-bottom-color: rgba(167, 139, 250, 0.4);
+}
+
+.section-toggle h2 {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #ffffff;
+  flex: 1;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-icon {
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-toggle:hover .toggle-icon {
+  background: rgba(167, 139, 250, 0.5);
+  transform: scale(1.1);
+}
+
+.section-content {
+  display: block;
+  padding: 2em;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+.section-content.collapsed {
+  display: none;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Priority section styling */
+.priority-section {
+  border-color: rgba(239, 68, 68, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.priority-section:hover {
+  border-color: rgba(239, 68, 68, 0.8);
+  box-shadow: 0 12px 40px 0 rgba(239, 68, 68, 0.4),
+    0 0 0 1px rgba(239, 68, 68, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+.priority-section .section-toggle {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.2) 0%,
+    rgba(220, 38, 38, 0.2) 100%
+  );
+  border-bottom-color: rgba(239, 68, 68, 0.4);
+}
+
+.priority-section .section-toggle:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.3) 0%,
+    rgba(220, 38, 38, 0.3) 100%
+  );
+}
+
+.priority-section .section-toggle h2 {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+.priority-section .toggle-icon {
+  background: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+}
+
+.priority-section .section-toggle:hover .toggle-icon {
+  background: rgba(239, 68, 68, 0.6);
+}
+
 /* Overdue indicators */
 .overdue-card.has-overdue {
   border-color: rgba(239, 68, 68, 0.6);
@@ -28,34 +177,44 @@
 
 /* Weekly summary */
 .weekly-summary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(167, 139, 250, 0.15);
+  border: 2px solid rgba(167, 139, 250, 0.3);
   border-radius: 16px;
-  padding: 1.5em;
-  margin-bottom: 2em;
+  padding: 1.8em;
+  margin-top: 1.5em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
 .weekly-summary h3 {
-  color: #c4b5fd;
-  font-size: 1.1em;
-  margin-bottom: 1em;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .summary-stats {
   display: flex;
-  gap: 2em;
+  gap: 2.5em;
   flex-wrap: wrap;
 }
 
 .summary-item {
-  color: #e2e8f0;
-  font-size: 0.9em;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .summary-item strong {
-  color: #a78bfa;
-  font-size: 1.2em;
+  color: #ffffff;
+  font-size: 1.6em;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 8px rgba(167, 139, 250, 0.5);
 }
 
 /* Source and contact info */
@@ -222,25 +381,25 @@
   .summary-stats {
     gap: 1em;
   }
-  
+
   .recruit-actions {
     flex-direction: column;
   }
-  
+
   .btn-followup {
     width: 100%;
     justify-content: center;
   }
-  
+
   .modal-content {
     width: 95%;
     margin: 1em;
   }
-  
+
   .template-buttons {
     flex-direction: column;
   }
-  
+
   .template-btn {
     width: 100%;
     text-align: center;
