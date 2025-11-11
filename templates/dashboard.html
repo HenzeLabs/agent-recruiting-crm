@@ -1,87 +1,86 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="dashboard-layout">
-  
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="sidebar-section">
-      <div class="nav-item active" onclick="showSection('overview')">
-        <span class="nav-icon">📊</span>
-        <span class="nav-label">Dashboard</span>
-      </div>
-      <div class="nav-item" onclick="showSection('priority')">
-        <span class="nav-icon">🔥</span>
-        <span class="nav-label">Priority</span>
-        {% if overdue_count > 0 %}<span class="badge">{{ overdue_count }}</span>{% endif %}
-      </div>
-      <div class="nav-item" onclick="showSection('pipeline')">
-        <span class="nav-icon">📈</span>
-        <span class="nav-label">Pipeline</span>
-      </div>
-      <div class="nav-item" onclick="showSection('recruits')">
-        <span class="nav-icon">👥</span>
-        <span class="nav-label">All Recruits</span>
-      </div>
-    </div>
-    
-    <div class="sidebar-section">
-      <div class="nav-item" onclick="window.location.href='/add'">
-        <span class="nav-icon">➕</span>
-        <span class="nav-label">Add Recruit</span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    
-    <!-- Overview Section -->
-    <div class="content-section active" id="overview-section">
-      <div class="section-header">
-        <h2>Dashboard Overview</h2>
-        <p>{{ recruits|length }} total recruits • {{ weekly_new }} added this week</p>
-      </div>
-      
-      <div class="cards-grid">
+<div class="dashboard-grid">
+  <!-- Stats Cards (Collapsible) -->
+  <div class="collapsible-section">
+    <button class="section-header" onclick="toggleSection('stats')">
+      <span class="toggle-icon">▼</span>
+      <h3>📊 Pipeline Overview</h3>
+    </button>
+    <div class="section-content" id="stats-content">
+      <section class="stats-row">
         {% for stage, count in counts.items() %}
-        <div class="metric-card" onclick="showStageDetails('{{ stage }}')">
-          <div class="metric-number">{{ count }}</div>
-          <div class="metric-label">{{ stage }}</div>
-        </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              {% if stage == "New" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14"/>
+                </svg>
+              {% elif stage == "Contacted" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              {% elif stage == "In Training" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+              {% elif stage == "Licensed" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3"/>
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+                </svg>
+              {% endif %}
+            </div>
+            <div class="stat-content">
+              <h3>{{ count }}</h3>
+              <p>{{ stage }}</p>
+            </div>
+          </div>
         {% endfor %}
         
-        <div class="metric-card urgent {% if overdue_count > 0 %}has-alerts{% endif %}">
-          <div class="metric-number">{{ overdue_count }}</div>
-          <div class="metric-label">Need Follow-up</div>
+        <div class="stat-card overdue-card {% if overdue_count > 0 %}has-overdue{% endif %}">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <h3>{{ overdue_count }}</h3>
+            <p>Need Follow-up</p>
+          </div>
         </div>
-      </div>
+      </section>
       
-      {% if overdue_count > 0 %}
-      <div class="alert-section">
-        <h3>⚠️ Requires Attention ({{ overdue_count }})</h3>
-        <div class="quick-list">
-          {% for r in recruits[:3] %}
-            {% if r.get('is_overdue') %}
-            <div class="quick-item">
-              <span class="name">{{ r['name'] }}</span>
-              <span class="stage">{{ r['stage'] }}</span>
-              <button class="btn-mini" onclick="quickFollowup({{ r['id'] }}, '{{ r['name'] }}', '{{ r['stage'] }}')">Follow-up</button>
-            </div>
-            {% endif %}
-          {% endfor %}
+      <section class="weekly-summary">
+        <h3>This Week</h3>
+        <div class="summary-stats">
+          <span class="summary-item">
+            <strong>{{ weekly_new }}</strong> new leads
+          </span>
+          <span class="summary-item">
+            <strong>{{ weekly_licensed }}</strong> licensed
+          </span>
+          <span class="summary-item">
+            <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion
+          </span>
         </div>
-      </div>
-      {% endif %}
+      </section>
     </div>
+  </div>
 
-    <!-- Priority Section -->
-    <div class="content-section" id="priority-section">
-      <div class="section-header">
-        <h2>🔥 Priority Actions</h2>
-        <p>Recruits needing immediate attention</p>
-      </div>
-      
-      <div class="recruits-grid">
+  <!-- Priority Actions (Collapsible) -->
+  {% if overdue_count > 0 or recruits|selectattr('stage', 'equalto', 'New')|list|length > 0 %}
+  <div class="collapsible-section priority">
+    <button class="section-header" onclick="toggleSection('priority')">
+      <span class="toggle-icon">▼</span>
+      <h3>🔥 Priority Actions ({{ (overdue_count + recruits|selectattr('stage', 'equalto', 'New')|list|length) }})</h3>
+    </button>
+    <div class="section-content" id="priority-content">
+      <div class="recruits-list">
         {% for r in recruits %}
           {% if r.get('is_overdue') or r['stage'] == 'New' %}
             {% include 'recruit_card.html' %}
@@ -89,58 +88,27 @@
         {% endfor %}
       </div>
     </div>
+  </div>
+  {% endif %}
 
-    <!-- Pipeline Section -->
-    <div class="content-section" id="pipeline-section">
+  <!-- All Recruits (Collapsible) -->
+  <div class="collapsible-section">
+    <button class="section-header" onclick="toggleSection('recruits')">
+      <span class="toggle-icon">▶</span>
+      <h3>👥 All Recruits ({{ recruits|length }})</h3>
+    </button>
+    <div class="section-content collapsed" id="recruits-content">
       <div class="section-header">
-        <h2>📈 Pipeline Analysis</h2>
-        <p>Track progress through recruitment stages</p>
+        <span class="recruit-count">{{ recruits|length }} total</span>
       </div>
       
-      <div class="pipeline-flow">
-        {% for stage in stages %}
-        <div class="pipeline-stage" onclick="filterByStage('{{ stage }}')">
-          <div class="stage-count">{{ counts[stage] }}</div>
-          <div class="stage-name">{{ stage }}</div>
-          <div class="stage-bar">
-            <div class="stage-fill" style="width: {{ (counts[stage] / recruits|length * 100) if recruits|length > 0 else 0 }}%"></div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      
-      <div class="conversion-stats">
-        <div class="stat-item">
-          <span class="stat-value">{{ weekly_licensed }}</span>
-          <span class="stat-label">Licensed This Week</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</span>
-          <span class="stat-label">Conversion Rate</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- All Recruits Section -->
-    <div class="content-section" id="recruits-section">
-      <div class="section-header">
-        <h2>👥 All Recruits</h2>
-        <div class="filter-pills">
-          <button class="filter-pill active" onclick="filterRecruits('all')">All</button>
-          {% for stage in stages %}
-            <button class="filter-pill" onclick="filterRecruits('{{ stage }}')">{{ stage }}</button>
-          {% endfor %}
-        </div>
-      </div>
-      
-      <div class="recruits-grid" id="all-recruits">
+      <div class="recruits-list">
         {% for r in recruits %}
           {% include 'recruit_card.html' %}
         {% endfor %}
       </div>
     </div>
-
-  </main>
+  </div>
 </div>
     
     <!-- Priority Actions -->
@@ -262,28 +230,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// Section navigation
-function showSection(sectionId) {
-  // Hide all sections
-  document.querySelectorAll('.content-section').forEach(section => {
-    section.classList.remove('active');
-  });
+// Simple collapsible sections
+function toggleSection(sectionId) {
+  const content = document.getElementById(sectionId + '-content');
+  const header = content.previousElementSibling;
+  const icon = header.querySelector('.toggle-icon');
   
-  // Remove active from nav items
-  document.querySelectorAll('.nav-item').forEach(item => {
-    item.classList.remove('active');
-  });
-  
-  // Show selected section
-  document.getElementById(sectionId + '-section').classList.add('active');
-  
-  // Highlight nav item
-  event.target.closest('.nav-item').classList.add('active');
-}
-
-function showStageDetails(stage) {
-  showSection('recruits');
-  setTimeout(() => filterRecruits(stage), 100);
+  if (content.classList.contains('collapsed')) {
+    content.classList.remove('collapsed');
+    icon.textContent = '▼';
+  } else {
+    content.classList.add('collapsed');
+    icon.textContent = '▶';
+  }
 }
 
 // Filter recruits by stage
