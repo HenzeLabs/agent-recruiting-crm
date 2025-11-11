@@ -1,0 +1,1167 @@
+
+> automentor_crm@1.0.0 test
+> playwright test
+
+[1A[2K[WebServer] INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[WebServer]  * Running on http://127.0.0.1:5001
+
+[1A[2K[WebServer] INFO:werkzeug:[33mPress CTRL+C to quit[0m
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:56] "GET / HTTP/1.1" 200 -
+
+
+Running 22 tests using 4 workers
+
+[1A[2K[1/22] [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone)
+[1A[2K[2/22] [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only)
+[1A[2K[3/22] [chromium] › tests/crm.spec.js:66:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should validate required name field
+[1A[2K[4/22] [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET / HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET / HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET / HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:58] "GET / HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[31m[1mPOST /api/recruits HTTP/1.1[0m" 400 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[5/22] [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:02:59] "GET /api/templates HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:00] "GET /api/templates HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:00] "GET /api/templates HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:01] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:01] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:01] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K  1) [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only) 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Minimal Name Only')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Minimal Name Only')[22m
+
+
+      61 |       await page.waitForURL("/");
+      62 |
+    > 63 |       await expect(page.locator("text=Minimal Name Only")).toBeVisible();
+         |                                                            ^
+      64 |     });
+      65 |
+      66 |     test("should validate required name field", async ({ page }) => {
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:63:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-a3cde-ith-minimal-data-name-only--chromium/error-context.md
+
+
+[1A[2K  2) [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=John Complete Doe')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=John Complete Doe')[22m
+
+
+      27 |
+      28 |       // Verify recruit appears on dashboard
+    > 29 |       await expect(page.locator("text=John Complete Doe")).toBeVisible();
+         |                                                            ^
+      30 |
+      31 |       // Verify stage count updated
+      32 |       const statsRow = page.locator(".stats-row");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:29:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-2665a-ete-recruit-with-all-fields-chromium/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone) 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Jane Partial Smith')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Jane Partial Smith')[22m
+
+
+      47 |       await page.waitForURL("/");
+      48 |
+    > 49 |       await expect(page.locator("text=Jane Partial Smith")).toBeVisible();
+         |                                                             ^
+      50 |     });
+      51 |
+      52 |     test("should add recruit with minimal data (name only)", async ({
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:49:61
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-d0ef1-partial-data-missing-phone--chromium/error-context.md
+
+
+[1A[2K[6/22] [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[7/22] [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[8/22] [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:08] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  4) [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.recruit-card').filter({ has: locator('text=Stage Transition Test') }).first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Stage Transition Test') }).first()[22m
+
+
+      122 |         .first();
+      123 |
+    > 124 |       await expect(recruitCard).toBeVisible();
+          |                                 ^
+      125 |
+      126 |       // Click edit button
+      127 |       await recruitCard.locator("button:has-text('Edit')").click();
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:124:33
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-2b707-tage-and-reflect-in-metrics-chromium/error-context.md
+
+
+[1A[2K[9/22] [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:12] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K  5) [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Keyboard Test')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Keyboard Test')[22m
+
+
+      212 |
+      213 |       await page.waitForURL("/");
+    > 214 |       await expect(page.locator("text=Keyboard Test")).toBeVisible();
+          |                                                        ^
+      215 |     });
+      216 |   });
+      217 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:214:56
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-b248b-oard-navigation-in-dropdown-chromium/error-context.md
+
+
+[1A[2K[10/22] [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  6) [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.textContent: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.stats-row').locator('.stat-card').first()[22m
+
+
+      83 |       const statsRow = page.locator(".stats-row");
+      84 |       const newStageCard = statsRow.locator(".stat-card").first();
+    > 85 |       const initialText = await newStageCard.textContent();
+         |                                              ^
+      86 |       const initialCount = parseInt(initialText?.match(/\d+/)?.[0] || "0");
+      87 |
+      88 |       // Add recruit via form
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:85:46
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-69755-hboard-after-adding-recruit-chromium/error-context.md
+
+
+[1A[2K[11/22] [chromium] › tests/crm.spec.js:291:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete one recruit per stage accurately
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:31] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:32] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:33] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[12/22] [chromium] › tests/crm.spec.js:329:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should display all stage cards correctly
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  7) [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Bulk Test 1') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      168 |           .first();
+      169 |
+    > 170 |         await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                              ^
+      171 |         await recruitCard
+      172 |           .locator("select[name='stage']")
+      173 |           .selectOption(stages[i]);
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:170:62
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-fdad4-ulk-stage-updates-correctly-chromium/error-context.md
+
+
+[1A[2K[13/22] [chromium] › tests/crm.spec.js:351:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should render cards correctly with 10+ entries
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  8) [chromium] › tests/crm.spec.js:329:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should display all stage cards correctly 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.stats-row').locator('.stat-card').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.stats-row').locator('.stat-card').first()[22m
+
+
+      334 |
+      335 |       // Should have 5 stage cards minimum (might have weekly stats too)
+    > 336 |       await expect(statCards.first()).toBeVisible();
+          |                                       ^
+      337 |
+      338 |       // Check stage labels present
+      339 |       const stages = [
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:336:39
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-9c36f-y-all-stage-cards-correctly-chromium/error-context.md
+
+
+[1A[2K[14/22] [chromium] › tests/crm.spec.js:366:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should maintain smooth scroll performance
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  9) [chromium] › tests/crm.spec.js:351:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should render cards correctly with 10+ entries 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.recruits-list')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.recruits-list')[22m
+
+
+      354 |       // Check if recruits list exists
+      355 |       const recruitsList = page.locator(".recruits-list");
+    > 356 |       await expect(recruitsList).toBeVisible();
+          |                                  ^
+      357 |
+      358 |       // Verify cards render
+      359 |       const recruitCards = page.locator(".recruit-card");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:356:34
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-22264-s-correctly-with-10-entries-chromium/error-context.md
+
+
+[1A[2K[15/22] [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  10) [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Edit Test User') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      237 |         .first();
+      238 |
+    > 239 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      240 |
+      241 |       // Modify notes
+      242 |       await recruitCard
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:239:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-25a39-ecruit-without-page-refresh-chromium/error-context.md
+
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:42] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[16/22] [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K  11) [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.textContent: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.stats-row').locator('.stat-card').first()[22m
+
+
+      264 |       const statsRow = page.locator(".stats-row");
+      265 |       const newCard = statsRow.locator(".stat-card").first();
+    > 266 |       const initialText = await newCard.textContent();
+          |                                         ^
+      267 |       const initialCount = parseInt(initialText?.match(/\d+/)?.[0] || "0");
+      268 |
+      269 |       // Delete recruit
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:266:41
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-d74ce-e-recruit-and-update-counts-chromium/error-context.md
+
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[17/22] [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:43] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:44] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  12) [chromium] › tests/crm.spec.js:366:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should maintain smooth scroll performance 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('a:has-text(\'Add Recruit\')')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('a:has-text(\'Add Recruit\')')[22m
+
+
+      381 |       // Page should still be responsive
+      382 |       const addButton = page.locator("a:has-text('Add Recruit')");
+    > 383 |       await expect(addButton).toBeVisible();
+          |                               ^
+      384 |     });
+      385 |   });
+      386 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:383:31
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-5da5f-n-smooth-scroll-performance-chromium/error-context.md
+
+
+[1A[2K[18/22] [chromium] › tests/crm.spec.js:469:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle very long names
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:46] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  13) [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Persistence Test User')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Persistence Test User')[22m
+
+
+      398 |
+      399 |       // Verify recruit exists
+    > 400 |       await expect(page.locator("text=Persistence Test User")).toBeVisible();
+          |                                                                ^
+      401 |
+      402 |       // Refresh page
+      403 |       await page.reload();
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:400:64
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-c1719--data-across-page-refreshes-chromium/error-context.md
+
+
+[1A[2K[19/22] [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:49] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:49] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  14) [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=First Duplicate')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=First Duplicate')[22m
+
+
+      463 |
+      464 |       // Both should exist (system allows duplicates)
+    > 465 |       await expect(page.locator("text=First Duplicate")).toBeVisible();
+          |                                                          ^
+      466 |       await expect(page.locator("text=Second Duplicate")).toBeVisible();
+      467 |     });
+      468 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:465:58
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-bb101-uld-handle-duplicate-emails-chromium/error-context.md
+
+
+[1A[2K[20/22] [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:51] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  15) [chromium] › tests/crm.spec.js:469:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle very long names 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.recruit-card').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.recruit-card').first()[22m
+
+
+      478 |       // Should display without breaking layout
+      479 |       const recruitCard = page.locator(".recruit-card").first();
+    > 480 |       await expect(recruitCard).toBeVisible();
+          |                                 ^
+      481 |     });
+      482 |
+      483 |     test("should handle special characters in input", async ({ page }) => {
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:480:33
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-3faf6-ould-handle-very-long-names-chromium/error-context.md
+
+
+[1A[2K[21/22] [chromium] › tests/crm.spec.js:530:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should display correctly on mobile viewport
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  16) [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Test User @#$% & Symbols')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Test User @#$% & Symbols')[22m
+
+
+      493 |
+      494 |       // Should handle without XSS or breaking
+    > 495 |       await expect(page.locator("text=Test User @#$% & Symbols")).toBeVisible();
+          |                                                                   ^
+      496 |     });
+      497 |
+      498 |     test("should handle backward stage transitions", async ({ page }) => {
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:495:67
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-92588-special-characters-in-input-chromium/error-context.md
+
+
+[1A[2K[22/22] [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /static/animations.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /static/forms.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /static/style.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /static/app.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /static/workflow.css HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /sw.js HTTP/1.1" 200 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "GET /add HTTP/1.1" 200 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:55] "[35m[1mPOST /api/recruits HTTP/1.1[0m" 201 -
+
+[1A[2K[WebServer] ERROR:app:Unexpected error in dashboard: 'sqlite3.Row' object has no attribute 'get'
+
+[1A[2K[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 01:03:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+
+[1A[2K  17) [chromium] › tests/crm.spec.js:530:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should display correctly on mobile viewport 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('nav')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('nav')[22m
+
+
+      535 |
+      536 |       // Navigation should be visible
+    > 537 |       await expect(page.locator("nav")).toBeVisible();
+          |                                         ^
+      538 |
+      539 |       // Stats should stack vertically
+      540 |       const statsRow = page.locator(".stats-row");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:537:41
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-a3d1c-orrectly-on-mobile-viewport-chromium/error-context.md
+
+
+[1A[2K  18) [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Tablet Test')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Tablet Test')[22m
+
+
+      562 |       await page.waitForURL("/");
+      563 |
+    > 564 |       await expect(page.locator("text=Tablet Test")).toBeVisible();
+          |                                                      ^
+      565 |     });
+      566 |   });
+      567 | });
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:564:54
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-26fad-ain-functionality-on-tablet-chromium/error-context.md
+
+
+[1A[2K  19) [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Timestamp Test') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      430 |         .first();
+      431 |
+    > 432 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      433 |       await recruitCard
+      434 |         .locator("select[name='stage']")
+      435 |         .selectOption("Contacted");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:432:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-bfb98-erve-timestamps-after-edits-chromium/error-context.md
+
+
+[1A[2K  20) [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Backward Stage Test') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      511 |         .first();
+      512 |
+    > 513 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      514 |       await recruitCard
+      515 |         .locator("select[name='stage']")
+      516 |         .selectOption("Contacted");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:513:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-3a39c--backward-stage-transitions-chromium/error-context.md
+
+
+[1A[2K  20 failed
+    [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields 
+    [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone) 
+    [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only) 
+    [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit 
+    [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics 
+    [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly 
+    [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown 
+    [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh 
+    [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts 
+    [chromium] › tests/crm.spec.js:329:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should display all stage cards correctly 
+    [chromium] › tests/crm.spec.js:351:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should render cards correctly with 10+ entries 
+    [chromium] › tests/crm.spec.js:366:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should maintain smooth scroll performance 
+    [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes 
+    [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits 
+    [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails 
+    [chromium] › tests/crm.spec.js:469:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle very long names 
+    [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input 
+    [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions 
+    [chromium] › tests/crm.spec.js:530:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should display correctly on mobile viewport 
+    [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet 
+  2 passed (1.4m)
+
+  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.

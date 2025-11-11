@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-grid">
+  <!-- Stats Cards Row -->
+  <section class="stats-row">
+    {% for stage, count in counts.items() %}
+      <div class="stat-card">
+        <div class="stat-icon">
+          {% if stage == "New" %}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+          {% elif stage == "Contacted" %}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          {% elif stage == "In Training" %}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          {% elif stage == "Licensed" %}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3"/>
+            </svg>
+          {% else %}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+            </svg>
+          {% endif %}
+        </div>
+        <div class="stat-content">
+          <h3>{{ count }}</h3>
+          <p>{{ stage }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    
+    <!-- Overdue Card -->
+    <div class="stat-card overdue-card {% if overdue_count > 0 %}has-overdue{% endif %}">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12,6 12,12 16,14"/>
+        </svg>
+      </div>
+      <div class="stat-content">
+        <h3>{{ overdue_count }}</h3>
+        <p>Need Follow-up</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Weekly Summary -->
+  <section class="weekly-summary">
+    <h3>This Week</h3>
+    <div class="summary-stats">
+      <span class="summary-item">
+        <strong>{{ weekly_new }}</strong> new leads
+      </span>
+      <span class="summary-item">
+        <strong>{{ weekly_licensed }}</strong> licensed
+      </span>
+      <span class="summary-item">
+        <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion
+      </span>
+    </div>
+  </section>
+
+  <!-- Recruits List -->
+  <section class="recruits-section">
+    <div class="section-header">
+      <h2>All Recruits</h2>
+      <span class="recruit-count">{{ recruits|length }} total</span>
+    </div>
+    
+    <div class="recruits-list">
+      {% for r in recruits %}
+        <div class="recruit-card {% if r.get('is_overdue') %}overdue{% endif %}" data-recruit-id="{{ r['id'] }}">
+          {% if r.get('is_overdue') %}
+            <div class="overdue-badge">⏰ Follow-up needed</div>
+          {% endif %}
+          <form action="{{ url_for('update', id=r['id']) }}" method="POST">
+            <div class="recruit-header">
+              <div class="recruit-avatar">{{ r['name'][0] }}</div>
+              <div class="recruit-info">
+                <h3>{{ r['name'] }}</h3>
+                <p>{{ r['email'] }}</p>
+                <p class="phone">{{ r['phone'] }}</p>
+                {% if r.get('source') %}
+                  <p class="source">Source: {{ r['source'] }}</p>
+                {% endif %}
+                {% if r.get('last_contact') %}
+                  <p class="last-contact">Last contact: {{ r['last_contact'][:10] }}</p>
+                {% endif %}
+              </div>
+              <div class="recruit-stage">
+                <select name="stage" class="stage-select">
+                  {% for s in stages %}
+                    <option value="{{s}}" {% if s==r['stage'] %}selected{% endif %}>{{s}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="recruit-notes">
+              <label>Notes</label>
+              <textarea name="notes" rows="2">{{ r['notes'] }}</textarea>
+            </div>
+            <div class="recruit-actions">
+              <button type="submit" class="btn-save">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+                  <polyline points="17 21 17 13 7 13 7 21"/>
+                  <polyline points="7 3 7 8 15 8"/>
+                </svg>
+                Save
+              </button>
+              
+              {% if r.get('is_overdue') or r['stage'] in ['New', 'Contacted'] %}
+                <button type="button" class="btn-followup" onclick="quickFollowup({{ r['id'] }}, '{{ r['name'] }}', '{{ r['stage'] }}')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  Follow-up
+                </button>
+              {% endif %}
+              
+              <a href="{{ url_for('delete', id=r['id']) }}" class="btn-delete">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                </svg>
+                Delete
+              </a>
+            </div>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<!-- Quick Follow-up Modal -->
+<div id="followupModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Quick Follow-up</h3>
+      <button class="modal-close" onclick="closeFollowupModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Send follow-up to <strong id="followupName"></strong></p>
+      
+      <div class="template-buttons" id="templateButtons">
+        <!-- Templates will be loaded here -->
+      </div>
+      
+      <div class="custom-message">
+        <label for="customMessage">Or write custom message:</label>
+        <textarea id="customMessage" rows="3" placeholder="Type your message..."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-primary" onclick="sendFollowup()">Send & Mark Contact</button>
+      <button class="btn-secondary" onclick="closeFollowupModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentRecruitId = null;
+let messageTemplates = [];
+
+// Load templates on page load
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const response = await fetch('/api/templates');
+    messageTemplates = await response.json();
+  } catch (error) {
+    console.error('Failed to load templates:', error);
+  }
+});
+
+function quickFollowup(recruitId, name, stage) {
+  currentRecruitId = recruitId;
+  document.getElementById('followupName').textContent = name;
+  
+  // Show relevant templates
+  const templateButtons = document.getElementById('templateButtons');
+  templateButtons.innerHTML = '';
+  
+  const relevantTemplates = messageTemplates.filter(t => 
+    t.stage === stage || t.stage === null
+  );
+  
+  relevantTemplates.forEach(template => {
+    const btn = document.createElement('button');
+    btn.className = 'template-btn';
+    btn.textContent = template.name;
+    btn.onclick = () => selectTemplate(template.id, template.content.replace('{name}', name));
+    templateButtons.appendChild(btn);
+  });
+  
+  document.getElementById('followupModal').style.display = 'flex';
+}
+
+function selectTemplate(templateId, content) {
+  document.getElementById('customMessage').value = content;
+  // Highlight selected template
+  document.querySelectorAll('.template-btn').forEach(btn => btn.classList.remove('selected'));
+  event.target.classList.add('selected');
+}
+
+async function sendFollowup() {
+  const message = document.getElementById('customMessage').value.trim();
+  if (!message) {
+    alert('Please enter a message');
+    return;
+  }
+  
+  try {
+    const response = await fetch('/api/quick-message', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        recruit_id: currentRecruitId,
+        message: message
+      })
+    });
+    
+    if (response.ok) {
+      window.crm.showNotification('Follow-up sent!', 'success');
+      closeFollowupModal();
+      
+      // Remove overdue badge
+      const card = document.querySelector(`[data-recruit-id="${currentRecruitId}"]`);
+      if (card) {
+        card.classList.remove('overdue');
+        const badge = card.querySelector('.overdue-badge');
+        if (badge) badge.remove();
+      }
+      
+      // Update stats
+      window.crm.refreshStats();
+    } else {
+      throw new Error('Failed to send');
+    }
+  } catch (error) {
+    window.crm.showNotification('Failed to send follow-up', 'error');
+  }
+}
+
+function closeFollowupModal() {
+  document.getElementById('followupModal').style.display = 'none';
+  document.getElementById('customMessage').value = '';
+  currentRecruitId = null;
+}
+</script>
+
+{% endblock %}

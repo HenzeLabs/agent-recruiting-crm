@@ -1,0 +1,101 @@
+/* Error and validation styles */
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  font-weight: 500;
+}
+
+.field-error {
+  color: #fca5a5;
+  font-size: 0.8em;
+  margin-top: 0.3em;
+  min-height: 1.2em;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: rgba(239, 68, 68, 0.6);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+/* Success states */
+.success-message {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #86efac;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  font-weight: 500;
+}
+
+/* Loading button state */
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary.loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-primary.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Improved focus indicators */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #a78bfa;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .recruit-card {
+    border-width: 2px;
+  }
+  
+  .stage-select,
+  input,
+  textarea {
+    border-width: 2px;
+  }
+}

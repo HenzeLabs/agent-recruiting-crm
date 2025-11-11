@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="theme-color" content="#a78bfa" />
+    <title>{% block title %}Gina's Client Dashboard{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='animations.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='forms.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='workflow.css') }}"
+    />
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </head>
+  <body>
+    <div class="offline-indicator" id="offlineIndicator">
+      📡 You're offline - changes will sync when connection returns
+    </div>
+    
+    <header>
+      <h1>Gina's Client Dashboard</h1>
+      <nav>
+        <a href="{{ url_for('dashboard') }}" aria-label="View dashboard">Dashboard</a>
+        <a href="{{ url_for('add') }}" aria-label="Add new recruit">Add Recruit</a>
+      </nav>
+    </header>
+    
+    <main role="main">
+      {% if error %}
+        <div class="error-message" role="alert">
+          {{ error }}
+        </div>
+      {% endif %}
+      {% block content %}{% endblock %}
+    </main>
+    
+    <script>
+      // Show/hide offline indicator
+      function updateOnlineStatus() {
+        const indicator = document.getElementById('offlineIndicator');
+        if (navigator.onLine) {
+          indicator.classList.remove('show');
+        } else {
+          indicator.classList.add('show');
+        }
+      }
+      
+      window.addEventListener('online', updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+      updateOnlineStatus();
+    </script>
+  </body>
+</html>

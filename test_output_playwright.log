@@ -1,0 +1,685 @@
+[WebServer] INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[WebServer]  * Running on http://127.0.0.1:5001
+[WebServer] INFO:werkzeug:[33mPress CTRL+C to quit[0m
+[WebServer] INFO:app:Dashboard: Found 0 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:55] "GET / HTTP/1.1" 200 -
+
+Running 22 tests using 4 workers
+
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:56] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 0 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:57] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 0 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 0 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 0 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET / HTTP/1.1" 200 -
+  ✓   2 [chromium] › tests/crm.spec.js:66:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should validate required name field (2.2s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:app:Dashboard: Found 1 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 1 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:58] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:59] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:59] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:59] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:59] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:58:59] "GET /api/templates HTTP/1.1" 200 -
+  ✘   5 [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit (1.0s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:00] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:00] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:00] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 4 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:01] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:03] "GET /sw.js HTTP/1.1" 200 -
+  ✘   3 [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone) (7.6s)
+  ✘   4 [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only) (7.7s)
+  ✘   1 [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields (7.8s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:04] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 5 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 5 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 7 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:05] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:06] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:06] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:06] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:06] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:07] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:07] "GET /api/templates HTTP/1.1" 200 -
+  ✘   6 [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics (6.0s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:07] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:07] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 10 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:08] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:10] "GET /sw.js HTTP/1.1" 200 -
+  ✘   8 [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown (6.2s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 11 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:12] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:13] "GET /api/templates HTTP/1.1" 200 -
+  ✓  11 [chromium] › tests/crm.spec.js:291:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete one recruit per stage accurately (2.0s)
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET / HTTP/1.1" 200 -
+  ✓  12 [chromium] › tests/crm.spec.js:329:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should display all stage cards correctly (509ms)
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:14] "GET / HTTP/1.1" 200 -
+  ✓  13 [chromium] › tests/crm.spec.js:351:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should render cards correctly with 10+ entries (426ms)
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET / HTTP/1.1" 200 -
+  ✓  14 [chromium] › tests/crm.spec.js:366:5 › AutoMentor CRM - Comprehensive Testing › Level 4: Dashboard Integrity › should maintain smooth scroll performance (851ms)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:15] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 16 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:16] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:18] "GET /sw.js HTTP/1.1" 200 -
+  ✘  15 [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes (7.3s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 17 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:25] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:27] "GET /sw.js HTTP/1.1" 200 -
+  ✘   7 [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly (30.0s)
+  ✘   9 [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh (30.0s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 18 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:35] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 20 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:36] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /api/templates HTTP/1.1" 200 -
+  ✓  18 [chromium] › tests/crm.spec.js:469:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle very long names (784ms)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 21 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:37] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:38] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:38] "GET /api/templates HTTP/1.1" 200 -
+  ✘  10 [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts (30.1s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 22 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:39] "GET /api/templates HTTP/1.1" 200 -
+  ✘  17 [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails (5.8s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:41] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 23 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET / HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 23 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:42] "GET / HTTP/1.1" 200 -
+  ✓  21 [chromium] › tests/crm.spec.js:530:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should display correctly on mobile viewport (586ms)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /static/style.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /static/animations.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /static/forms.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /static/app.js HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /static/workflow.css HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] INFO:app:Dashboard: Found 23 recruits in test_db.sqlite3
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /add HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET / HTTP/1.1" 200 -
+  ✘  19 [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input (5.9s)
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "[32mPOST /add HTTP/1.1[0m" 302 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:43] "GET /api/templates HTTP/1.1" 200 -
+[WebServer] INFO:werkzeug:127.0.0.1 - - [11/Nov/2025 02:59:45] "GET /sw.js HTTP/1.1" 200 -
+  ✘  22 [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet (5.7s)
+  ✘  16 [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits (30.0s)
+  ✘  20 [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions (30.0s)
+
+
+  1) [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=John Complete Doe')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=John Complete Doe')[22m
+
+
+      27 |
+      28 |       // Verify recruit appears on dashboard
+    > 29 |       await expect(page.locator("text=John Complete Doe")).toBeVisible();
+         |                                                            ^
+      30 |
+      31 |       // Verify stage count updated
+      32 |       const statsRow = page.locator(".stats-row");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:29:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-2665a-ete-recruit-with-all-fields-chromium/error-context.md
+
+  2) [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone) 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Jane Partial Smith')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Jane Partial Smith')[22m
+
+
+      47 |       await page.waitForURL("/");
+      48 |
+    > 49 |       await expect(page.locator("text=Jane Partial Smith")).toBeVisible();
+         |                                                             ^
+      50 |     });
+      51 |
+      52 |     test("should add recruit with minimal data (name only)", async ({
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:49:61
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-d0ef1-partial-data-missing-phone--chromium/error-context.md
+
+  3) [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only) 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Minimal Name Only')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Minimal Name Only')[22m
+
+
+      61 |       await page.waitForURL("/");
+      62 |
+    > 63 |       await expect(page.locator("text=Minimal Name Only")).toBeVisible();
+         |                                                            ^
+      64 |     });
+      65 |
+      66 |     test("should validate required name field", async ({ page }) => {
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:63:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-a3cde-ith-minimal-data-name-only--chromium/error-context.md
+
+  4) [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m1[39m
+    Received:   [31m1[39m
+
+       97 |       const updatedCount = parseInt(updatedText?.match(/\d+/)?.[0] || "0");
+       98 |
+    >  99 |       expect(updatedCount).toBeGreaterThan(initialCount);
+          |                            ^
+      100 |     });
+      101 |   });
+      102 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:99:28
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-69755-hboard-after-adding-recruit-chromium/error-context.md
+
+  5) [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.recruit-card').filter({ has: locator('text=Stage Transition Test') }).first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Stage Transition Test') }).first()[22m
+
+
+      122 |         .first();
+      123 |
+    > 124 |       await expect(recruitCard).toBeVisible();
+          |                                 ^
+      125 |
+      126 |       // Click edit button
+      127 |       await recruitCard.locator("button:has-text('Edit')").click();
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:124:33
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-2b707-tage-and-reflect-in-metrics-chromium/error-context.md
+
+  6) [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Bulk Test 1') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      168 |           .first();
+      169 |
+    > 170 |         await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                              ^
+      171 |         await recruitCard
+      172 |           .locator("select[name='stage']")
+      173 |           .selectOption(stages[i]);
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:170:62
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-fdad4-ulk-stage-updates-correctly-chromium/error-context.md
+
+  7) [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Keyboard Test')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Keyboard Test')[22m
+
+
+      212 |
+      213 |       await page.waitForURL("/");
+    > 214 |       await expect(page.locator("text=Keyboard Test")).toBeVisible();
+          |                                                        ^
+      215 |     });
+      216 |   });
+      217 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:214:56
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-b248b-oard-navigation-in-dropdown-chromium/error-context.md
+
+  8) [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Edit Test User') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      237 |         .first();
+      238 |
+    > 239 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      240 |
+      241 |       // Modify notes
+      242 |       await recruitCard
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:239:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-25a39-ecruit-without-page-refresh-chromium/error-context.md
+
+  9) [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Delete Test User') }).first().locator('button:has-text(\'Delete\')')[22m
+
+
+      274 |         .first();
+      275 |
+    > 276 |       await recruitCard.locator("button:has-text('Delete')").click();
+          |                                                              ^
+      277 |
+      278 |       // Confirm deletion (if dialog appears)
+      279 |       page.on("dialog", (dialog) => dialog.accept());
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:276:62
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-d74ce-e-recruit-and-update-counts-chromium/error-context.md
+
+  10) [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Persistence Test User')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Persistence Test User')[22m
+
+
+      398 |
+      399 |       // Verify recruit exists
+    > 400 |       await expect(page.locator("text=Persistence Test User")).toBeVisible();
+          |                                                                ^
+      401 |
+      402 |       // Refresh page
+      403 |       await page.reload();
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:400:64
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-c1719--data-across-page-refreshes-chromium/error-context.md
+
+  11) [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Timestamp Test') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      430 |         .first();
+      431 |
+    > 432 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      433 |       await recruitCard
+      434 |         .locator("select[name='stage']")
+      435 |         .selectOption("Contacted");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:432:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-bfb98-erve-timestamps-after-edits-chromium/error-context.md
+
+  12) [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=First Duplicate')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=First Duplicate')[22m
+
+
+      463 |
+      464 |       // Both should exist (system allows duplicates)
+    > 465 |       await expect(page.locator("text=First Duplicate")).toBeVisible();
+          |                                                          ^
+      466 |       await expect(page.locator("text=Second Duplicate")).toBeVisible();
+      467 |     });
+      468 |
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:465:58
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-bb101-uld-handle-duplicate-emails-chromium/error-context.md
+
+  13) [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Test User @#$% & Symbols')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Test User @#$% & Symbols')[22m
+
+
+      493 |
+      494 |       // Should handle without XSS or breaking
+    > 495 |       await expect(page.locator("text=Test User @#$% & Symbols")).toBeVisible();
+          |                                                                   ^
+      496 |     });
+      497 |
+      498 |     test("should handle backward stage transitions", async ({ page }) => {
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:495:67
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-92588-special-characters-in-input-chromium/error-context.md
+
+  14) [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.recruit-card').filter({ has: locator('text=Backward Stage Test') }).first().locator('button:has-text(\'Edit\')')[22m
+
+
+      511 |         .first();
+      512 |
+    > 513 |       await recruitCard.locator("button:has-text('Edit')").click();
+          |                                                            ^
+      514 |       await recruitCard
+      515 |         .locator("select[name='stage']")
+      516 |         .selectOption("Contacted");
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:513:60
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-3a39c--backward-stage-transitions-chromium/error-context.md
+
+  15) [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Tablet Test')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Tablet Test')[22m
+
+
+      562 |       await page.waitForURL("/");
+      563 |
+    > 564 |       await expect(page.locator("text=Tablet Test")).toBeVisible();
+          |                                                      ^
+      565 |     });
+      566 |   });
+      567 | });
+        at /Users/laurenadmin/Projects/automentor_crm/tests/crm.spec.js:564:54
+
+    Error Context: test-results/crm-AutoMentor-CRM---Compr-26fad-ain-functionality-on-tablet-chromium/error-context.md
+
+  15 failed
+    [chromium] › tests/crm.spec.js:12:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add complete recruit with all fields 
+    [chromium] › tests/crm.spec.js:36:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with partial data (missing phone) 
+    [chromium] › tests/crm.spec.js:52:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should add recruit with minimal data (name only) 
+    [chromium] › tests/crm.spec.js:77:5 › AutoMentor CRM - Comprehensive Testing › Level 1: Intake - Data Entry › should instantly refresh dashboard after adding recruit 
+    [chromium] › tests/crm.spec.js:106:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should update recruit stage and reflect in metrics 
+    [chromium] › tests/crm.spec.js:148:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should handle bulk stage updates correctly 
+    [chromium] › tests/crm.spec.js:193:5 › AutoMentor CRM - Comprehensive Testing › Level 2: Stage Transitions › should support keyboard navigation in dropdown 
+    [chromium] › tests/crm.spec.js:221:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should edit existing recruit without page refresh 
+    [chromium] › tests/crm.spec.js:255:5 › AutoMentor CRM - Comprehensive Testing › Level 3: Edit & Delete Flow › should delete recruit and update counts 
+    [chromium] › tests/crm.spec.js:390:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should persist data across page refreshes 
+    [chromium] › tests/crm.spec.js:419:5 › AutoMentor CRM - Comprehensive Testing › Level 5: Persistence & Refresh › should preserve timestamps after edits 
+    [chromium] › tests/crm.spec.js:447:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle duplicate emails 
+    [chromium] › tests/crm.spec.js:483:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle special characters in input 
+    [chromium] › tests/crm.spec.js:498:5 › AutoMentor CRM - Comprehensive Testing › Level 6: Edge Cases › should handle backward stage transitions 
+    [chromium] › tests/crm.spec.js:554:5 › AutoMentor CRM - Comprehensive Testing › Level 7: Mobile Responsiveness › should maintain functionality on tablet 
+  7 passed (1.2m)

@@ -1,0 +1,78 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-8.3.4, pluggy-1.6.0 -- /Users/laurenadmin/Projects/automentor_crm/venv/bin/python3.14
+cachedir: .pytest_cache
+rootdir: /Users/laurenadmin/Projects/automentor_crm
+collecting ... collected 29 items
+
+tests/test_api.py::TestRecruitsCRUD::test_get_all_recruits_empty FAILED  [  3%]
+tests/test_api.py::TestRecruitsCRUD::test_create_recruit_complete PASSED [  6%]
+tests/test_api.py::TestRecruitsCRUD::test_create_recruit_minimal PASSED  [ 10%]
+tests/test_api.py::TestRecruitsCRUD::test_create_recruit_no_name PASSED  [ 13%]
+tests/test_api.py::TestRecruitsCRUD::test_create_recruit_empty_name PASSED [ 17%]
+tests/test_api.py::TestRecruitsCRUD::test_get_all_recruits_after_create FAILED [ 20%]
+tests/test_api.py::TestRecruitsCRUD::test_get_recruit_by_id PASSED       [ 24%]
+tests/test_api.py::TestRecruitsCRUD::test_get_recruit_not_found PASSED   [ 27%]
+tests/test_api.py::TestRecruitsCRUD::test_update_recruit PASSED          [ 31%]
+tests/test_api.py::TestRecruitsCRUD::test_update_recruit_not_found PASSED [ 34%]
+tests/test_api.py::TestRecruitsCRUD::test_delete_recruit PASSED          [ 37%]
+tests/test_api.py::TestRecruitsCRUD::test_delete_recruit_not_found PASSED [ 41%]
+tests/test_api.py::TestStageTransitions::test_stage_progression PASSED   [ 44%]
+tests/test_api.py::TestStageTransitions::test_backward_stage_transition PASSED [ 48%]
+tests/test_api.py::TestStageTransitions::test_stage_to_inactive PASSED   [ 51%]
+tests/test_api.py::TestEdgeCases::test_duplicate_emails PASSED           [ 55%]
+tests/test_api.py::TestEdgeCases::test_special_characters_in_name PASSED [ 58%]
+tests/test_api.py::TestEdgeCases::test_very_long_name PASSED             [ 62%]
+tests/test_api.py::TestEdgeCases::test_empty_json_body PASSED            [ 65%]
+tests/test_api.py::TestEdgeCases::test_malformed_json PASSED             [ 68%]
+tests/test_api.py::TestEdgeCases::test_invalid_stage PASSED              [ 72%]
+tests/test_api.py::TestBulkOperations::test_create_multiple_recruits FAILED [ 75%]
+tests/test_api.py::TestBulkOperations::test_bulk_updates FAILED          [ 79%]
+tests/test_api.py::TestBulkOperations::test_bulk_deletes FAILED          [ 82%]
+tests/test_api.py::TestDataPersistence::test_timestamps_on_create PASSED [ 86%]
+tests/test_api.py::TestDataPersistence::test_updated_at_changes_on_update PASSED [ 89%]
+tests/test_api.py::TestValidation::test_name_whitespace_trimming PASSED  [ 93%]
+tests/test_api.py::TestValidation::test_email_format_no_validation PASSED [ 96%]
+tests/test_api.py::TestValidation::test_phone_format_no_validation PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ TestRecruitsCRUD.test_get_all_recruits_empty _________________
+tests/test_api.py:56: in test_get_all_recruits_empty
+    assert len(data) == 0
+E   AssertionError: assert 100 == 0
+E    +  where 100 = len([{'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': None, 'id': 43, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'linda.hernandez757@icloud.com', 'id': 46, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'joseph.martinez128@hotmail.com', 'id': 47, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'john.jackson431@yahoo.com', 'id': 49, 'last_contact': None, ...}, {'created_at': '2025-11-10 07:58:53.056635+00:00', 'email': 'mike.white73@hotmail.com', 'id': 50, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'michael.miller155@gmail.com', 'id': 52, 'last_contact': None, ...}, ...])
+_____________ TestRecruitsCRUD.test_get_all_recruits_after_create ______________
+tests/test_api.py:114: in test_get_all_recruits_after_create
+    assert len(data) == 1
+E   AssertionError: assert 103 == 1
+E    +  where 103 = len([{'created_at': '2025-11-11 07:58:54.114814+00:00', 'email': 'test@example.com', 'id': 117, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.105948+00:00', 'email': None, 'id': 116, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.101667+00:00', 'email': 'test@example.com', 'id': 115, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': None, 'id': 43, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'linda.hernandez757@icloud.com', 'id': 46, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:53.056635+00:00', 'email': 'joseph.martinez128@hotmail.com', 'id': 47, 'last_contact': None, ...}, ...])
+_______________ TestBulkOperations.test_create_multiple_recruits _______________
+tests/test_api.py:337: in test_create_multiple_recruits
+    assert len(data) == 20
+E   AssertionError: assert 133 == 20
+E    +  where 133 = len([{'created_at': '2025-11-11 07:58:54.225117+00:00', 'email': 'bulk20@test.com', 'id': 148, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.224053+00:00', 'email': 'bulk19@test.com', 'id': 147, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.222977+00:00', 'email': 'bulk18@test.com', 'id': 146, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.221886+00:00', 'email': 'bulk17@test.com', 'id': 145, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.219931+00:00', 'email': 'bulk16@test.com', 'id': 144, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.218687+00:00', 'email': 'bulk15@test.com', 'id': 143, 'last_contact': None, ...}, ...])
+_____________________ TestBulkOperations.test_bulk_updates _____________________
+tests/test_api.py:360: in test_bulk_updates
+    assert licensed_count == 5
+E   assert 22 == 5
+_____________________ TestBulkOperations.test_bulk_deletes _____________________
+tests/test_api.py:380: in test_bulk_deletes
+    assert len(data) == 0
+E   AssertionError: assert 138 == 0
+E    +  where 138 = len([{'created_at': '2025-11-11 07:58:54.242435+00:00', 'email': None, 'id': 153, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.241280+00:00', 'email': None, 'id': 152, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.240136+00:00', 'email': None, 'id': 151, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.238904+00:00', 'email': None, 'id': 150, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.237482+00:00', 'email': None, 'id': 149, 'last_contact': None, ...}, {'created_at': '2025-11-11 07:58:54.225117+00:00', 'email': 'bulk20@test.com', 'id': 148, 'last_contact': None, ...}, ...])
+=============================== warnings summary ===============================
+tests/test_api.py: 98 warnings
+  /Users/laurenadmin/Projects/automentor_crm/app.py:214: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+    conn.execute("""
+
+tests/test_api.py: 12 warnings
+  /Users/laurenadmin/Projects/automentor_crm/app.py:249: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+    conn.execute("""
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_api.py::TestRecruitsCRUD::test_get_all_recruits_empty - Ass...
+FAILED tests/test_api.py::TestRecruitsCRUD::test_get_all_recruits_after_create
+FAILED tests/test_api.py::TestBulkOperations::test_create_multiple_recruits
+FAILED tests/test_api.py::TestBulkOperations::test_bulk_updates - assert 22 == 5
+FAILED tests/test_api.py::TestBulkOperations::test_bulk_deletes - AssertionEr...
+================== 5 failed, 24 passed, 110 warnings in 0.69s ==================
