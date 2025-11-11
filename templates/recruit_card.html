@@ -1,0 +1,43 @@
+<div class="recruit-card {% if r.get('is_overdue') %}overdue{% endif %}" data-recruit-id="{{ r['id'] }}" data-stage="{{ r['stage'] }}">
+  {% if r.get('is_overdue') %}
+    <div class="overdue-badge">⏰ Follow-up needed</div>
+  {% endif %}
+  <form action="{{ url_for('update', id=r['id']) }}" method="POST">
+    <div class="recruit-header">
+      <div class="recruit-avatar">{{ r['name'][0] }}</div>
+      <div class="recruit-info">
+        <h3>{{ r['name'] }}</h3>
+        <p>{{ r['email'] }}</p>
+        <p class="phone">{{ r['phone'] }}</p>
+        {% if r.get('source') %}
+          <p class="source">Source: {{ r['source'] }}</p>
+        {% endif %}
+        {% if r.get('last_contact') %}
+          <p class="last-contact">Last contact: {{ r['last_contact'][:10] }}</p>
+        {% endif %}
+      </div>
+      <div class="recruit-stage">
+        <select name="stage" class="stage-select">
+          {% for s in stages %}
+            <option value="{{s}}" {% if s==r['stage'] %}selected{% endif %}>{{s}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="recruit-notes">
+      <label>Notes</label>
+      <textarea name="notes" rows="2">{{ r['notes'] }}</textarea>
+    </div>
+    <div class="recruit-actions">
+      <button type="submit" class="btn-save">Save</button>
+      
+      {% if r.get('is_overdue') or r['stage'] in ['New', 'Contacted'] %}
+        <button type="button" class="btn-followup" onclick="quickFollowup({{ r['id'] }}, '{{ r['name'] }}', '{{ r['stage'] }}')">
+          Follow-up
+        </button>
+      {% endif %}
+      
+      <a href="{{ url_for('delete', id=r['id']) }}" class="btn-delete">Delete</a>
+    </div>
+  </form>
+</div>

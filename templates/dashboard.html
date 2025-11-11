@@ -1,142 +1,225 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="dashboard-grid">
-  <!-- Stats Cards Row -->
-  <section class="stats-row">
-    {% for stage, count in counts.items() %}
-      <div class="stat-card">
-        <div class="stat-icon">
-          {% if stage == "New" %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 5v14M5 12h14"/>
-            </svg>
-          {% elif stage == "Contacted" %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          {% elif stage == "In Training" %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          {% elif stage == "Licensed" %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3"/>
-            </svg>
-          {% else %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
-            </svg>
-          {% endif %}
-        </div>
-        <div class="stat-content">
-          <h3>{{ count }}</h3>
-          <p>{{ stage }}</p>
-        </div>
-      </div>
-    {% endfor %}
-    
-    <!-- Overdue Card -->
-    <div class="stat-card overdue-card {% if overdue_count > 0 %}has-overdue{% endif %}">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <polyline points="12,6 12,12 16,14"/>
-        </svg>
-      </div>
-      <div class="stat-content">
-        <h3>{{ overdue_count }}</h3>
-        <p>Need Follow-up</p>
-      </div>
-    </div>
-  </section>
+<div class="dashboard-layout">
   
-  <!-- Weekly Summary -->
-  <section class="weekly-summary">
-    <h3>This Week</h3>
-    <div class="summary-stats">
-      <span class="summary-item">
-        <strong>{{ weekly_new }}</strong> new leads
-      </span>
-      <span class="summary-item">
-        <strong>{{ weekly_licensed }}</strong> licensed
-      </span>
-      <span class="summary-item">
-        <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion
-      </span>
-    </div>
-  </section>
-
-  <!-- Recruits List -->
-  <section class="recruits-section">
-    <div class="section-header">
-      <h2>All Recruits</h2>
-      <span class="recruit-count">{{ recruits|length }} total</span>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="nav-item active" onclick="showSection('overview')">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Dashboard</span>
+      </div>
+      <div class="nav-item" onclick="showSection('priority')">
+        <span class="nav-icon">🔥</span>
+        <span class="nav-label">Priority</span>
+        {% if overdue_count > 0 %}<span class="badge">{{ overdue_count }}</span>{% endif %}
+      </div>
+      <div class="nav-item" onclick="showSection('pipeline')">
+        <span class="nav-icon">📈</span>
+        <span class="nav-label">Pipeline</span>
+      </div>
+      <div class="nav-item" onclick="showSection('recruits')">
+        <span class="nav-icon">👥</span>
+        <span class="nav-label">All Recruits</span>
+      </div>
     </div>
     
-    <div class="recruits-list">
-      {% for r in recruits %}
-        <div class="recruit-card {% if r.get('is_overdue') %}overdue{% endif %}" data-recruit-id="{{ r['id'] }}">
-          {% if r.get('is_overdue') %}
-            <div class="overdue-badge">⏰ Follow-up needed</div>
-          {% endif %}
-          <form action="{{ url_for('update', id=r['id']) }}" method="POST">
-            <div class="recruit-header">
-              <div class="recruit-avatar">{{ r['name'][0] }}</div>
-              <div class="recruit-info">
-                <h3>{{ r['name'] }}</h3>
-                <p>{{ r['email'] }}</p>
-                <p class="phone">{{ r['phone'] }}</p>
-                {% if r.get('source') %}
-                  <p class="source">Source: {{ r['source'] }}</p>
-                {% endif %}
-                {% if r.get('last_contact') %}
-                  <p class="last-contact">Last contact: {{ r['last_contact'][:10] }}</p>
-                {% endif %}
-              </div>
-              <div class="recruit-stage">
-                <select name="stage" class="stage-select">
-                  {% for s in stages %}
-                    <option value="{{s}}" {% if s==r['stage'] %}selected{% endif %}>{{s}}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-            <div class="recruit-notes">
-              <label>Notes</label>
-              <textarea name="notes" rows="2">{{ r['notes'] }}</textarea>
-            </div>
-            <div class="recruit-actions">
-              <button type="submit" class="btn-save">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
-                  <polyline points="17 21 17 13 7 13 7 21"/>
-                  <polyline points="7 3 7 8 15 8"/>
-                </svg>
-                Save
-              </button>
-              
-              {% if r.get('is_overdue') or r['stage'] in ['New', 'Contacted'] %}
-                <button type="button" class="btn-followup" onclick="quickFollowup({{ r['id'] }}, '{{ r['name'] }}', '{{ r['stage'] }}')">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                  Follow-up
-                </button>
-              {% endif %}
-              
-              <a href="{{ url_for('delete', id=r['id']) }}" class="btn-delete">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="3 6 5 6 21 6"/>
-                  <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                </svg>
-                Delete
-              </a>
-            </div>
-          </form>
-        </div>
-      {% endfor %}
+    <div class="sidebar-section">
+      <div class="nav-item" onclick="window.location.href='/add'">
+        <span class="nav-icon">➕</span>
+        <span class="nav-label">Add Recruit</span>
+      </div>
     </div>
-  </section>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Overview Section -->
+    <div class="content-section active" id="overview-section">
+      <div class="section-header">
+        <h2>Dashboard Overview</h2>
+        <p>{{ recruits|length }} total recruits • {{ weekly_new }} added this week</p>
+      </div>
+      
+      <div class="cards-grid">
+        {% for stage, count in counts.items() %}
+        <div class="metric-card" onclick="showStageDetails('{{ stage }}')">
+          <div class="metric-number">{{ count }}</div>
+          <div class="metric-label">{{ stage }}</div>
+        </div>
+        {% endfor %}
+        
+        <div class="metric-card urgent {% if overdue_count > 0 %}has-alerts{% endif %}">
+          <div class="metric-number">{{ overdue_count }}</div>
+          <div class="metric-label">Need Follow-up</div>
+        </div>
+      </div>
+      
+      {% if overdue_count > 0 %}
+      <div class="alert-section">
+        <h3>⚠️ Requires Attention ({{ overdue_count }})</h3>
+        <div class="quick-list">
+          {% for r in recruits[:3] %}
+            {% if r.get('is_overdue') %}
+            <div class="quick-item">
+              <span class="name">{{ r['name'] }}</span>
+              <span class="stage">{{ r['stage'] }}</span>
+              <button class="btn-mini" onclick="quickFollowup({{ r['id'] }}, '{{ r['name'] }}', '{{ r['stage'] }}')">Follow-up</button>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Priority Section -->
+    <div class="content-section" id="priority-section">
+      <div class="section-header">
+        <h2>🔥 Priority Actions</h2>
+        <p>Recruits needing immediate attention</p>
+      </div>
+      
+      <div class="recruits-grid">
+        {% for r in recruits %}
+          {% if r.get('is_overdue') or r['stage'] == 'New' %}
+            {% include 'recruit_card.html' %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Pipeline Section -->
+    <div class="content-section" id="pipeline-section">
+      <div class="section-header">
+        <h2>📈 Pipeline Analysis</h2>
+        <p>Track progress through recruitment stages</p>
+      </div>
+      
+      <div class="pipeline-flow">
+        {% for stage in stages %}
+        <div class="pipeline-stage" onclick="filterByStage('{{ stage }}')">
+          <div class="stage-count">{{ counts[stage] }}</div>
+          <div class="stage-name">{{ stage }}</div>
+          <div class="stage-bar">
+            <div class="stage-fill" style="width: {{ (counts[stage] / recruits|length * 100) if recruits|length > 0 else 0 }}%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <div class="conversion-stats">
+        <div class="stat-item">
+          <span class="stat-value">{{ weekly_licensed }}</span>
+          <span class="stat-label">Licensed This Week</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</span>
+          <span class="stat-label">Conversion Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Recruits Section -->
+    <div class="content-section" id="recruits-section">
+      <div class="section-header">
+        <h2>👥 All Recruits</h2>
+        <div class="filter-pills">
+          <button class="filter-pill active" onclick="filterRecruits('all')">All</button>
+          {% for stage in stages %}
+            <button class="filter-pill" onclick="filterRecruits('{{ stage }}')">{{ stage }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="recruits-grid" id="all-recruits">
+        {% for r in recruits %}
+          {% include 'recruit_card.html' %}
+        {% endfor %}
+      </div>
+    </div>
+
+  </main>
+</div>
+    
+    <!-- Priority Actions -->
+    {% if overdue_count > 0 or recruits|selectattr('stage', 'equalto', 'New')|list|length > 0 %}
+    <div class="section-container priority-section">
+      <button class="section-toggle active" onclick="toggleSection('priority')">
+        <span class="toggle-icon">▼</span>
+        <h3>🔥 Priority Actions ({{ (overdue_count + recruits|selectattr('stage', 'equalto', 'New')|list|length) }})</h3>
+      </button>
+      <div class="section-content" id="priority-content">
+        {% for r in recruits %}
+          {% if r.get('is_overdue') or r['stage'] == 'New' %}
+            {% include 'recruit_card.html' %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Pipeline Overview -->
+    <div class="section-container">
+      <button class="section-toggle" onclick="toggleSection('pipeline')">
+        <span class="toggle-icon">▶</span>
+        <h3>📊 Pipeline Overview</h3>
+      </button>
+      <div class="section-content collapsed" id="pipeline-content">
+        <div class="stats-row">
+          {% for stage, count in counts.items() %}
+            <div class="stat-card" onclick="filterByStage('{{ stage }}')">
+              <div class="stat-content">
+                <h3>{{ count }}</h3>
+                <p>{{ stage }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="weekly-details">
+          <p><strong>{{ weekly_new }}</strong> new • <strong>{{ weekly_licensed }}</strong> licensed • <strong>{{ ((weekly_licensed / weekly_new * 100) if weekly_new > 0 else 0)|round(1) }}%</strong> conversion</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Recruits -->
+    <div class="section-container">
+      <button class="section-toggle" onclick="toggleSection('active')">
+        <span class="toggle-icon">▶</span>
+        <h3>👥 Active Recruits ({{ recruits|selectattr('stage', 'in', ['Contacted', 'In Training'])|list|length }})</h3>
+      </button>
+      <div class="section-content collapsed" id="active-content">
+        {% for r in recruits %}
+          {% if r['stage'] in ['Contacted', 'In Training'] %}
+            {% include 'recruit_card.html' %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- All Recruits -->
+    <div class="section-container">
+      <button class="section-toggle" onclick="toggleSection('all')">
+        <span class="toggle-icon">▶</span>
+        <h3>📋 All Recruits ({{ recruits|length }})</h3>
+      </button>
+      <div class="section-content collapsed" id="all-content">
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="filterRecruits('all')">All</button>
+          {% for stage in stages %}
+            <button class="filter-tab" onclick="filterRecruits('{{ stage }}')">{{ stage }}</button>
+          {% endfor %}
+        </div>
+        <div class="recruits-list" id="all-recruits">
+          {% for r in recruits %}
+            {% include 'recruit_card.html' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- Quick Follow-up Modal -->
@@ -178,6 +261,64 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Failed to load templates:', error);
   }
 });
+
+// Section navigation
+function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('.content-section').forEach(section => {
+    section.classList.remove('active');
+  });
+  
+  // Remove active from nav items
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // Show selected section
+  document.getElementById(sectionId + '-section').classList.add('active');
+  
+  // Highlight nav item
+  event.target.closest('.nav-item').classList.add('active');
+}
+
+function showStageDetails(stage) {
+  showSection('recruits');
+  setTimeout(() => filterRecruits(stage), 100);
+}
+
+// Filter recruits by stage
+function filterRecruits(stage) {
+  const cards = document.querySelectorAll('#all-recruits .recruit-card');
+  const pills = document.querySelectorAll('.filter-pill');
+  
+  // Update active pill
+  pills.forEach(pill => pill.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+  
+  // Show/hide cards
+  cards.forEach(card => {
+    if (stage === 'all' || card.dataset.stage === stage) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Filter by stage from pipeline
+function filterByStage(stage) {
+  // Open all recruits section
+  const allSection = document.getElementById('all-content');
+  if (allSection.classList.contains('collapsed')) {
+    toggleSection('all');
+  }
+  
+  // Filter to specific stage
+  setTimeout(() => {
+    const stageTab = document.querySelector(`[onclick="filterRecruits('${stage}')"]`);
+    if (stageTab) stageTab.click();
+  }, 100);
+}
 
 function quickFollowup(recruitId, name, stage) {
   currentRecruitId = recruitId;
